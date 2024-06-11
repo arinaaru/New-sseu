@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный сайт ФИО</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Логотип">
+        <h1>ФИО</h1>
+        <p>Небольшой текст о себе</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="hobbies.html">Хобби</a></li>
+            <li><a href="tables.html">Таблицы</a></li>
+            <li><a href="media.html">Медиа</a></li>
+            <li><a href="lists.html">Списки</a></li>
+            <li><a href="contact.html">Обратная связь</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Контент страницы -->
+    </main>
+    <footer>
+        <p>Свяжитесь со мной:</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+        <p>&copy; <span id="currentYear"></span> ФИО. Все права защищены.</p>
+        <p>Текущая дата и время: <span id="currentDateTime"></span></p>
+    </footer>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById("currentDateTime").textContent = now.toLocaleString();
+        }, 1000);
+    </script>
+</body>
+</html>
